@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+<div id="app">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1>Calculadora de média</h1>
+                <form action="">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" v-model="nomeAluno">
+                    <br>
+                    <label for="prova01">Prova 1</label>
+                    <input type="number" step="0.01" min="0" max="10" name="prova01" v-model="NotaPrimeira">
+                    <br>
+                    <label type="number" for="prova02">Prova 2</label>
+                    <input type="number" step="0.01" min="0" max="10" name="prova02" v-model="NotaSegunda">
+                    <!-- <label for="prova03">Prova 3</label>
+                    <input type="number" min="0" max="10" name="prova03" v-model="NotaTerceira"> -->
+                </form>
+
+                <span v-if="NotaPrimeira != null && NotaSegunda != null">
+                    {{resultado}}
+                </span>
+
+                <div>
+                    <h2>DEBUG AREA</h2>
+                    <hr>
+                    <span>Nome: {{nomeAluno}}</span><br>
+                    <span>Status: {{status}}</span><br>
+                    <span>Nota 1: {{NotaPrimeira}}</span><br>
+                    <span>Nota 2: {{NotaSegunda}}</span><br>
+                    <span>Nota 3: {{NotaTerceira}}</span><br>
+                    <span>Nota necessaria: {{Notanecessaria}}</span><br>
+                    <span>MEDIA : {{media}}</span><br>
+                </div>
+            </div>
+            <div class="col-6"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="main.js"></script>
+
+</html>

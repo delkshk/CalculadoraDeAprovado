@@ -1,0 +1,1 @@
+body{background:url("bg.jpg") no-repeat center center;background-size:cover;overflow:hidden}body #app{height:100vh;width:100vw;display:flex;justify-content:center;align-items:center}.container{width:75vw;height:80vh;background-color:#f8f8f8;border-radius:5px}.container .row{padding:1em}@media (min-width: 768px){.container .row .col-6{width:50%;padding:1em}}
