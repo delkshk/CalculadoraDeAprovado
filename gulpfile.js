@@ -20,7 +20,7 @@ const {
 gulp.task('uglify', function () {
 	gulp.src(filesJs)
 		.pipe(babel({presets: ['@babel/preset-env']}))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest(outputJs));
 });
 
